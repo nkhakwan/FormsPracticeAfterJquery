@@ -12,11 +12,13 @@ $(document).ready(function() {
 
 
 
+
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-/*code for the addition function
+
 //Back end code
 var add = function(number1, number2) {
   return number1 + number2;
@@ -37,15 +39,25 @@ var divide = function(number1, number2) {
 // Front end code.
 
 $(document).ready(function() {
-  $("form#adding").submit(function(event){
+  $("form#calculating").submit(function(event){
     event.preventDefault();
     var number1 = parseInt($("#add1").val());
     var number2 = parseInt($("#add2").val());
 
-  var result = (add(number1, number2));
-  $("#onlyPut").text(result);
+    var operation = parseInt($("#calcType").val());
+    
+    if (operation === 1){
+        var result = (add(number1, number2));
+    } else if (operation === 2){
+      var result = (multiply(number1, number2));
+    } else if (operation === 3){
+      var result = (divide(number1, number2));
+    } else {
+      var result = (subtract(number1, number2))
+    }
+  $("#output").text(result);
   });
-});*/
+});
 
 
 
