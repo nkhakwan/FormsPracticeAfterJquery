@@ -28,6 +28,14 @@ $(document).ready(function() {
   });
 });
 
+
+
+
+
+
+
+
+
 // Commenting the underneath out as it is a work from previous project "First Full day for Jquery" and here for reference.
 /*$(document).ready(function(){
   $(".clickabl").click(function(){
