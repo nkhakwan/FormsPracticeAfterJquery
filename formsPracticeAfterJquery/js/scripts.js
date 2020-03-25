@@ -1,3 +1,22 @@
+// This is for the appointment booking form.
+$(document).ready(function() {
+  $("form#booking").submit(function(event){
+    event.preventDefault();
+    var number1 = $("#name").val();
+    var number2 = $("#profession").val();
+    var number2 = $("#time").val();
+    var result = "you are booked"
+  $("#output").text(result);
+  });
+});
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+/*code for the addition function
 //Back end code
 var add = function(number1, number2) {
   return number1 + number2;
@@ -26,7 +45,7 @@ $(document).ready(function() {
   var result = (add(number1, number2));
   $("#onlyPut").text(result);
   });
-});
+});*/
 
 
 
@@ -34,6 +53,8 @@ $(document).ready(function() {
 
 
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 // Commenting the underneath out as it is a work from previous project "First Full day for Jquery" and here for reference.
@@ -77,6 +98,10 @@ $(document).ready(function() {
   });
   });
 }); */
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // This was for debugging practice on how to use alert and debugger. After debugger we can run our commands step by step
 /*$(document).ready(function() {
