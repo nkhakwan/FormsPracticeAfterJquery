@@ -67,6 +67,8 @@ $(document).ready(function() {
       var myInputs = parseInt($("#" + myInputs).val());
       duplicate.push(myInputs);
       console.log(myInputs);
+      $("#newForEachLoopPractice").prepend("<li>" +myInputs + "</li>");
+      $("#olPractice").prepend("<li>" +myInputs + "</li>");
     });
      /*var highSchool = parseInt($("#highSchool").val());
      var javaScript = parseInt($("#javaScript").val());
