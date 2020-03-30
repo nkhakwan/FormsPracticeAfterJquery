@@ -30,7 +30,7 @@ var stateMent = function(choice, highSchool, javaScript, engineeringDegree, inte
 // ###########################################   Front End code    ######################################
 
 
-$(document).ready(function() {
+/*$(document).ready(function() {
  $("form#courseSelection").submit(function(event){
     //alert("we are at the beginning of another block");
     //$("result").val()= "";
@@ -55,10 +55,36 @@ $(document).ready(function() {
       //$("#output") = "";
     //}
     $("#output").text(result);
-    
     //$("#returnButton").toggle();
-
     });
- 
+});*/
+$(document).ready(function() {
+  $("form#courseSelection").submit(function(event){
+    event.preventDefault();
+    var myJqueryInputs = ["highSchool", "javaScript", "engineeringDegree", "interest", "aptitude"];
+    var duplicate = [];
+    myJqueryInputs.forEach(function(myInputs){
+      var myInputs = parseInt($("#" + myInputs).val());
+      duplicate.push(myInputs);
+      console.log(myInputs);
+    });
+     /*var highSchool = parseInt($("#highSchool").val());
+     var javaScript = parseInt($("#javaScript").val());
+     var engineeringDegree = parseInt($("#engineeringDegree").val());
+     var interest = parseInt($("#interest").val());
+     var aptitude = parseInt($("#aptitude").val());
+     var selection = parseInt($("#courseType").val());
+     console.log(javaScript);
+     console.log(selection);  // for debugging
+     console.log(highSchool);  // for debugging
+     console.log(engineeringDegree);  // for debugging*/
+
+     var selection = parseInt($("#courseType").val());
+     var courseType = course(selection);
+     var result = stateMent(courseType, duplicate[0], duplicate[1], duplicate[2], duplicate[3],duplicate[4]);
     
+     $("#choice").toggle();
+     $("#questions").toggle();
+     $("#output").text(result);
+ });
 });
